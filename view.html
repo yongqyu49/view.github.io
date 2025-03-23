@@ -1,0 +1,1843 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Document</title>
+    <style>
+        body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, select, table, td, textarea, th, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        #cafe-body {
+            width: 1080px;
+            margin: 0 auto;
+        }
+
+        #naver-gnb {
+            position: relative;
+            width: 1080px;
+            height: 35px;
+            margin: 0 auto;
+            z-index: 10;
+        }
+
+        #naver-gnb .link_naver {
+            float: left;
+            margin: 13px 40px 0 0;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        #naver-gnb #gnb-menu {
+            float: right;
+            position: relative;
+        }
+
+        #naver-gnb #gnb-menu .naver-h, #naver-gnb #gnb-menu .m-cafe, #naver-gnb #gnb-menu .join-cafe, #naver-gnb #gnb-menu .chatting-cafe, #naver-gnb #gnb-menu #gnb, #naver-gnb #gnb-menu .gnb_name {
+            color: #333;
+        }
+
+        #naver-gnb #gnb-menu .naver-h, #naver-gnb #gnb-menu .m-cafe, #naver-gnb #gnb-menu .town-cafe, #naver-gnb #gnb-menu .join-cafe, #naver-gnb #gnb-menu .chatting-cafe, #naver-gnb #gnb-menu #gnb {
+            display: inline-block;
+            float: left;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+        #naver-gnb #gnb-menu .naver-h, #naver-gnb #gnb-menu .m-cafe, #naver-gnb #gnb-menu .town-cafe, #naver-gnb #gnb-menu .join-cafe, #naver-gnb #gnb-menu .chatting-cafe, #naver-gnb #gnb-menu #gnb {
+            display: inline-block;
+            float: left;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #333;
+        }
+
+        #naver-gnb #gnb-menu .join-cafe {
+            position: relative;
+            z-index: 10;
+        }
+
+        #naver-gnb #gnb-menu .tcol-c {
+            background-color: #e5e5e5;
+        }
+        #naver-gnb #gnb-menu .tcol-c {
+            display: inline-block;
+            width: 1px;
+            height: 12px;
+            margin: 1px 8px 0 6px;
+            vertical-align: top;
+        }
+
+        #naver-gnb #gnb-menu #gnb {
+            margin-top: 0;
+        }
+
+        #gnb {
+            position: relative;
+            z-index: 2147483646;
+            font-family: '나눔고딕', NanumGothic, '돋움', Dotum, 'Apple SD Gothic Neo', Helvetica, Sans-serif !important;
+            color: #444;
+            font-size: 12px;
+            letter-spacing: 0 !important;
+            line-height: normal !important;
+            text-align: left !important;
+        }
+
+        #gnb .blind {
+            display: block;
+            overflow: hidden;
+            position: absolute;
+            top: -1000em;
+            left: 0;
+            width: 1px;
+            height: 1px;
+            margin: 0;
+            padding: 0;
+            font-size: 0;
+            line-height: 0;
+        }
+
+        .blind, .d-none {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+
+        #gnb ul {
+            list-style: none;
+        }
+
+        .gnb_lst {
+            margin: 0;
+            padding: 0;
+            zoom: 1;
+        }
+
+        #naver-gnb #gnb-menu #gnb .gnb_login_li {
+            padding-top: 7px;
+            margin-left: 3px;
+        }
+
+        .gnb_login_li {
+            height: 23px;
+            padding: 5px 7px 0 0;
+        }
+
+        .gnb_login_li, .gnb_my_li, .gnb_notice_li, .gnb_talk_li, .mail_li, .gnb_service_li {
+            float: left;
+            margin-right: 2px;
+            overflow: visible;
+        }
+
+        .gnb_my_li {
+            margin-right: 7px;
+        }
+
+        #naver-gnb #gnb-menu #gnb .gnb_my_namebox {
+            display: inline-block;
+            padding: 2px 9px 0 0;
+            padding-top: 10px;
+            background-image: none !important;
+        }
+
+        .gnb_my_namebox {
+            padding: 2px 9px 0 0;
+            background-repeat: no-repeat;
+            background-position: 100% 50%;
+            zoom: 1;
+        }
+
+        a.gnb_my {
+            float: left;
+            display: block;
+            font-size: 12px;
+            vertical-align: middle;
+        }
+
+        a.gnb_my, .gnb_icon {
+            position: relative;
+        }
+
+        #naver-gnb #gnb-menu #gnb #gnb_name1 {
+            margin-right: -1px;
+            padding-left: 5px;
+            display: inline-block;
+            height: auto;
+            line-height: normal;
+            vertical-align: top;
+            font-size: 12px;
+        }
+
+        #front-img {
+            position: relative;
+            width: 1080px;
+            max-height: 340px;
+            margin: 0 auto 20px;
+        }
+
+        #front-img a {
+            display: block;
+        }
+
+        #special-menu {
+            width: 1080px;
+            margin: -12px auto 20px;
+            border: 1px solid #e5e5e5;
+            box-sizing: border-box;
+        }
+
+        #special-menu .special-menu {
+            display: table;
+            overflow: hidden;
+            padding: 14px 24px;
+        }
+
+        #special-menu .special-menu li:first-child {
+            padding-left: 0;
+        }
+        #special-menu .special-menu li {
+            display: table-cell;
+            position: relative;
+            padding-left: 22px;
+        }
+
+        #special-menu .special-menu .link_special {
+            display: block;
+            height: 15px;
+            font-size: 13px;
+            line-height: 15px;
+            color: #333;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            vertical-align: top;
+            word-wrap: break-word;
+            word-break: break-word;
+        }
+
+        #special-menu .special-menu li:before {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 10px;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            background-color: #a3a9a9;
+        }
+
+        .fi {
+            float: left;
+        }
+
+        .fr {
+            float: right;
+        }
+
+        .skin-1080 .info-action-tab {
+            border-top-color: #333;
+            border-bottom-color: #e5e5e5;
+        }
+        .skin-1080 .info-action-tab {
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            height: 38px;
+            border-top: 2px solid;
+            border-bottom: 1px solid;
+            padding: 0;
+        }
+
+        .skin-1080 .info-action-tab li {
+            color: #959595;
+        }
+        .skin-1080 .info-action-tab li {
+            position: relative;
+            flex: 1;
+            height: 38px;
+            font-weight: bold;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .skin-1080 .info-action-tab .gm-tcol-t {
+            color: #000;
+        }
+        .skin-1080 .info-action-tab li button {
+            width: 100%;
+            height: 38px;
+            font-weight: bold;
+            color: #959595;
+        }
+        button {
+            border: 0 none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .skin-1080 .info-action-tab li + li:before {
+            content: '';
+            position: absolute;
+            top: 12px;
+            left: 0;
+            display: block;
+            width: 1px;
+            height: 13px;
+            background: #D9D9D9;
+            opacity: 0.5;
+        }
+
+
+        .skin-1080 #member-action-data {
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .skin-1080 .ia-info-data {
+            padding: 15px 10px 12px;
+        }
+
+        .skin-1080 .ia-info-data li.gm-tcol-c:first-child {
+            float: left;
+            position: relative;
+            margin-right: 8px;
+            padding-top: 0;
+        }
+        .skin-1080 .ia-info-data li.gm-tcol-c {
+            display: block;
+            overflow: hidden;
+            float: none;
+            width: auto;
+            padding-top: 3px;
+        }
+        .skin-1080 .ia-info-data .gm-tcol-c {
+            color: #666;
+        }
+
+        .skin-1080 .ia-info-data li.gm-tcol-c:first-child a {
+            display: block;
+        }
+
+        .skin-1080 .ia-info-data li.gm-tcol-c:last-child {
+            color: #666;
+        }
+        .skin-1080 .ia-info-data li.gm-tcol-c:nth-child(2) {
+            display: inline-block;
+            font-size: 12px;
+            line-height: 15px;
+            vertical-align: top;
+        }
+
+        .skin-1080 .ia-info-data li.gm-tcol-c .id .ellipsis {
+            max-width: 70px;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 17px;
+        }
+
+        .skin-1080 .ia-info-data .gm-tcol-c .id .ellipsis {
+            color: #000;
+        }
+
+        .skin-1080 .ellipsis {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .skin-1080 .ellipsis {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .skin-1080 .ia-info-data .ico-manager {
+            border-color: #e5e5e5;
+            background-color: #fff;
+            color: #666;
+        }
+        .skin-1080 .ia-info-data .ico-manager {
+            display: inline-block;
+            padding: 1px 2px 1px;
+            border-radius: 4px;
+            border: 1px solid;
+            font-size: 10px;
+            line-height: 12px;
+            color: #949494;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .skin-1080 .ia-info-data .thm .gm-tcol-c {
+            margin-top: 4px;
+        }
+
+        .skin-1080 .ia-info-data2 {
+            border-top-color: #e5e5e5;
+            color: #333;
+        }
+        .skin-1080 .ia-info-data2 {
+            padding: 12px 10px;
+            border-top: 1px solid;
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        .skin-1080 .ia-info-data2 .level-info {
+            position: relative;
+        }
+
+        .skin-1080 .ia-info-data2 .level-info .gm-tcol-c {
+            display: block;
+            margin-bottom: 8px;
+            line-height: 14px;
+        }
+
+        .skin-1080 .d-none, .skin-1080 .blind {
+            overflow: hidden;
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+        }
+
+        .skin-1080 .ia-info-data2 .mem-cnt-info {
+            position: relative;
+        }
+
+        .skin-1080 .ia-info-data2 .mem-cnt-info .ico_lock2 {
+            background-position: -119px -24px;
+            width: 9px;
+            height: 11px;
+        }
+
+        .skin-1080 .ia-info-data2 .mem-cnt-info .link_invite {
+            color: #666;
+        }
+        .skin-1080 .ia-info-data2 .mem-cnt-info .link_invite {
+            float: right;
+            font-size: 12px;
+        }
+
+        .skin-1080 #ia-info-data-emblem {
+            border-top-color: #e5e5e5;
+        }
+        .skin-1080 #ia-info-data-emblem {
+            display: flex
+        ;
+            align-items: center;
+            padding: 12px 10px 15px 10px;
+            border-top: 1px solid;
+        }
+
+        .skin-1080 .cafe-write-btn a {
+            display: block;
+            height: 38px;
+            margin-bottom: 9px;
+            font-size: 13px;
+            text-align: center;
+            color: #fff;
+            border-radius: 6px;
+            background-color: #5a5a5a;
+            font-weight: bold;
+            line-height: 38px;
+        }
+
+        .skin-1080 .ia-info-btn .link_chat {
+            display: block;
+            height: 38px;
+            border-radius: 6px;
+            border: 1px solid;
+            font-size: 13px;
+            line-height: 38px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .skin-1080 #cafe-menu {
+            background-color: #fff;
+        }
+        .skin-1080 #cafe-menu {
+            margin: 8px 0;
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+
+        .skin-1080 .box-g-m {
+            border-bottom-color: #333;
+        }
+        .skin-1080 .box-g-m {
+            border-bottom: 2px solid;
+        }
+
+        .skin-1080 #cafe-menu .cafe-menu-tit.frst {
+            border-top-color: #333;
+            color: #000;
+        }
+        .skin-1080 #cafe-menu .cafe-menu-tit.frst {
+            padding: 12px 11px 9px;
+        }
+        .skin-1080 #cafe-menu .cafe-menu-tit {
+            border-top-color: #e5e5e5;
+        }
+        .skin-1080 #cafe-menu .cafe-menu-tit {
+            position: relative;
+            border-top: 2px solid;
+            border-bottom: 1px solid;
+        }
+
+        .skin-1080 #cafe-menu .cafe-menu-list {
+            padding: 0 10px;
+            margin-top: 6px;
+            font-size: 13px;
+            line-height: 24px;
+        }
+
+        .skin-1080 #cafe-menu .cafe-menu-space {
+            border-top: 1px solid #e5e5e5;
+        }
+        .skin-1080 #cafe-menu .cafe-menu-space {
+            height: 2px;
+        }
+
+        .skin-1080 #cafe-menu .cafe-menu-list {
+            padding: 0 10px;
+            margin-top: 6px;
+            font-size: 13px;
+            line-height: 24px;
+        }
+
+        .skin-1080 #cafe-menu .cafe-menu-list li:first-child {
+            margin-top: 2px;
+        }
+
+        .skin-1080 #cafe-menu .cafe-menu-list li {
+            position: relative;
+        }
+
+        .skin-1080 #cafe-menu .cafe-menu-list .ico-list {
+            margin: 6px 5px 0 0;
+            background-position: -306px -42px;
+            width: 10px;
+            height: 11px;
+        }
+        .skin-1080 #cafe-menu .cafe-menu-list [class*="ico-"] {
+            float: left;
+        }
+
+        .skin-1080 #cafe-menu .cafe-menu-list .ico-hot {
+            height: 12px;
+            margin: 5px 5px 0 0;
+            background-image: url(https://ssl.pstatic.net/static/cafe/cafe_pc/svg/ico-menu-hot.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .skin-1080 #cafe-menu .cafe-menu-list [class*="ico-"] {
+            float: left;
+        }
+
+        .skin-1080 #cafe-menu .cafe-menu-list li a {
+            color: #000;
+        }
+        .skin-1080 #cafe-menu .cafe-menu-list li a {
+            word-wrap: break-word;
+            word-break: break-word;
+        }
+
+        .skin-1080 #cafe-menu .cafe-menu-list .ico_new {
+            vertical-align: -0.5px;
+        }
+        .skin-1080 .com .box-w {
+            background-color: #f8f8f8;
+        }
+        .skin-1080 .com .box-w {
+            position: relative;
+            margin-bottom: 8px;
+            padding: 16px 12px;
+        }
+
+        .skin-1080 #cafe-secede {
+            color: #666;
+        }
+        .skin-1080 #cafe-secede {
+            padding: 8px 0;
+            font-size: 13px;
+            line-height: 22px;
+        }
+
+
+
+        /*app*/
+
+        #content-area {
+            position: relative;
+            width: 1080px;
+            margin: 0 auto;
+            clear: both;
+        }
+
+        #content-area #group-area {
+            width: 200px;
+        }
+        .skin-1080#group-area {
+            text-align: left;
+        }
+
+        #content-area #main-area {
+            width: 860px;
+        }
+
+        .layout_content {
+            width: 860px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            font-size: 13px;
+        }
+
+        .CommentBox .comment_list .CommentItemImage {
+            margin: 6px 0;
+        }
+
+        .CommentBox .comment_list .CommentItemImage .comment_image_link {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .CommentBox .comment_list .CommentItemImage .comment_image_link .image {
+            max-width: 250px;
+            max-height: 375px;
+            border-radius: 12px;
+            vertical-align: top;
+        }
+
+        .Article .article_wrap {
+            position: relative;
+            width: 860px;
+            margin: 0 auto;
+            font-size: 12px;
+        }
+
+        .ArticleTopBtns {
+            padding: 0 0 14px;
+        }
+
+        .ArticleTopBtns .left_area {
+            float: left;
+        }
+
+        .ArticleTopBtns .right_area {
+            float: right;
+        }
+
+        .ArticleTopBtns:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .BaseButton.size_default:first-child {
+            margin-left: 0;
+        }
+        .BaseButton.size_default {
+            min-width: 46px;
+            height: 36px;
+            margin-left: 10px;
+            padding: 0 12px;
+            font-size: 13px;
+            line-height: 36px;
+        }
+        .BaseButton--skinGray {
+            border: 1px solid #eff0f2;
+            background: #eff0f2;
+            color: #000000;
+        }
+        .BaseButton {
+            display: inline-block;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-weight: 700;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .ArticleContentBox {
+            min-width: 800px;
+            padding: 29px 29px 0;
+            border: 1px solid #ebecef;
+            border-radius: 6px;
+        }
+
+        .ArticleContentBox .article_header {
+            position: relative;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ebecef;
+        }
+
+        .ArticleTitle {
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+
+        .ArticleTitle .link_board {
+            color: #03c75a;
+        }
+
+        .ArticleTitle .title_area {
+            margin-top: 7px;
+        }
+
+        .ArticleTitle .title_area .title_text {
+            font-weight: 400;
+            font-size: 26px;
+            word-wrap: break-word;
+            word-break: break-word;
+            margin: 0;
+            padding: 0;
+        }
+
+        .ArticleTitle .title_area:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .WriterInfo .thumb_area {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .WriterInfo:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .WriterInfo .thumb_area .thumb {
+            position: relative;
+            display: block;
+            width: 36px;
+            height: 36px;
+        }
+
+        .WriterInfo .thumb_area .thumb img {
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+        }
+
+        .WriterInfo .thumb_area .thumb:after {
+            content: "";
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .WriterInfo .profile_area {
+            float: left;
+        }
+
+        .WriterInfo .profile_info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+        .WriterInfo .profile_info .nick_box {
+            display: inline-block;
+            position: relative;
+            vertical-align: top;
+        }
+
+        .WriterInfo .profile_info .nick_box .nickname {
+            margin-right: 6px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .WriterInfo .nickname, .WriterInfo a {
+            color: inherit;
+        }
+
+        .WriterInfo .profile_info .nick_level {
+            display: inline-block;
+            margin-right: 2px;
+            font-size: 13px;
+            vertical-align: top;
+            color: #676767;
+        }
+
+        .WriterInfo .profile_info .link_talk {
+            display: inline-block;
+            min-width: 48px;
+            height: 20px;
+            line-height: 20px;
+            font-size: 11px;
+            box-sizing: border-box;
+            font-weight: 700;
+            text-align: center;
+            vertical-align: top;
+            background: #eff0f2;
+            color: #000;
+            border-radius: 4px;
+        }
+
+        .WriterInfo .article_info {
+            font-size: 12px;
+            line-height: 13px;
+            color: #979797;
+        }
+
+        .WriterInfo .article_info .date {
+            margin-right: 8px;
+        }
+
+        .ArticleTool {
+            position: absolute;
+            right: 0;
+            bottom: 28px;
+            font-size: 13px;
+            line-height: 18px;
+        }
+
+        .ArticleTool .button_comment {
+            display: inline-block;
+            margin-right: 16px;
+            vertical-align: top;
+        }
+        .ArticleTool a {
+            color: inherit;
+        }
+
+        .ArticleContentBox .article_writer {
+            position: relative;
+            min-height: 36px;
+            margin: 40px 0 26px;
+        }
+
+        .ArticleWriterProfile .more_area {
+            display: inline-block;
+            vertical-align: top;
+        }
+        .ArticleWriterProfile a {
+            color: inherit;
+        }
+
+        .ArticleWriterProfile .more_area .thumb {
+            display: inline-block;
+            position: relative;
+            margin-right: 10px;
+            vertical-align: top;
+            width: 36px;
+            height: 36px;
+        }
+
+        .ArticleWriterProfile .more_area .thumb img {
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+        }
+
+        .ArticleWriterProfile .more_area .thumb:after {
+            content: "";
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .ArticleWriterProfile .more_area .box {
+            display: inline-block;
+            vertical-align: top;
+            padding-top: 11px;
+            font-size: 13px;
+        }
+
+        .ReplyBox {
+            position: relative;
+            margin-bottom: 27px;
+            line-height: 19px;
+        }
+
+        .ReplyBox .like_article {
+            display: inline-block;
+            position: relative;
+            vertical-align: top;
+            font-size: 13px;
+        }
+
+        .u_likeit_list_module a, .u_likeit_list_module div, .u_likeit_list_module em, .u_likeit_list_module img, .u_likeit_list_module li, .u_likeit_list_module p, .u_likeit_list_module span, .u_likeit_list_module strong, .u_likeit_list_module ul {
+            float: none;
+            position: static;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            background: 0 0;
+            letter-spacing: 0;
+            text-align: left;
+            text-decoration: none;
+            text-indent: 0;
+            white-space: normal;
+            list-style: none;
+            font-style: normal;
+            word-spacing: 0;
+        }
+
+        .ReplyBox .like_article .u_likeit_list_module .u_likeit_list_btn .u_cnt {
+            display: inline;
+            margin-left: 4px;
+            font-family: arial, sans-serif;
+            font-weight: 700;
+            line-height: 18px;
+            vertical-align: baseline;
+        }
+
+        .ReplyBox .like_article .u_likeit_list_module {
+            margin-right: 16px;
+        }
+
+        .u_likeit_list_module .u_likeit_list_btn {
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: top;
+        }
+
+        .ReplyBox .like_article .u_likeit_list_module .u_likeit_list_btn .u_ico {
+            width: 17px;
+            height: 17px;
+            margin-right: 6px;
+            background: url(https://ca-fe.pstatic.net/web-section/static/img/ico-post-like-f-53535.svg?a37a110…=) no-repeat;
+        }
+
+        .ReplyBox .like_article .button_like_list {
+            position: absolute;
+            top: -2px;
+            left: 20px;
+            right: 0;
+            bottom: -2px;
+        }
+
+        .ReplyBox .button_comment .icon_area {
+            display: inline-block;
+            position: relative;
+            margin-right: 2px;
+            vertical-align: top;
+        }
+
+        .ReplyBox .button_comment .num {
+            margin-left: 4px;
+            font-family: arial, sans-serif;
+            line-height: 18px;
+            font-weight: 700;
+        }
+
+        .ReplyBox .box_right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 13px;
+        }
+
+        .ReplyBox .social_article {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .ReplyBox .social_article .text_area {
+            position: relative;
+            display: inline-block;
+        }
+
+        .ReplyBox .social_article .text_area .naver-splugin {
+            display: block;
+        }
+
+        .ReplyBox .social_article .text_area .social_text {
+            display: inline-block;
+            line-height: 19px;
+            vertical-align: top;
+        }
+
+        .ReplyBox .report_article {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .ReplyBox .report_article:before {
+            content: "";
+            display: inline-block;
+            width: 1px;
+            height: 12px;
+            margin: 0 10px;
+            vertical-align: -2px;
+            background: rgba(0,0,0,0.15);
+        }
+
+        .ReplyBox .report_article .button_report {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .CommentBox .comment_option, .CommentBox .comment_option .comment_tab, .CommentBox .comment_option .comment_tab .comment_tab_list {
+            display: -ms-flexbox;
+            display: flex
+        ;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .CommentCleanBot~.CommentBox {
+            margin-top: -29px;
+        }
+
+        .CommentBox .comment_option {
+            position: relative;
+            padding: 18px 0;
+        }
+
+        .CommentBox .comment_option .comment_tab .comment_tab_list {
+            font-size: 15px;
+        }
+
+        .CommentBox .comment_option .comment_tab .comment_tab_item:first-child {
+            margin-left: 0;
+        }
+
+        .CommentBox .comment_option .comment_tab .comment_tab_item .comment_tab_button[aria-selected=true] {
+            color: black;
+            font-weight: 600;
+        }
+
+        .CommentBox .comment_option .comment_tab .comment_tab_item {
+            margin-left: 12px;
+        }
+
+        .CommentBox .comment_option .comment_tab .comment_refresh_button {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            margin-left: 2px;
+            background-image: url(https://ca-fe.pstatic.net/web-section/static/img/ico-post-refresh.svg?a4942b26a3b14fc5ab16c55dfb00e557);
+            background-repeat: no-repeat;
+        }
+
+        .CommentBox .comment_list:last-child {
+            padding-bottom: 16px;
+        }
+
+        .CommentBox .comment_list .CommentItem:first-child {
+            border-top: 0;
+        }
+        .CommentBox .comment_list .CommentItem {
+            position: relative;
+        }
+
+        .CommentBox .comment_list .comment_area {
+            position: relative;
+            padding: 14px 23px 14px 0;
+        }
+
+        .CommentBox .comment_list .comment_thumb {
+            position: absolute;
+            top: 14px;
+            left: 0;
+        }
+        .CommentBox a {
+            color: inherit;
+        }
+
+        .CommentBox .comment_list .comment_thumb img {
+            border-radius: 100%;
+        }
+
+        .CommentBox .comment_list .comment_box {
+            padding-left: 44px;
+        }
+
+        .CommentBox .comment_list .comment_nick_box {
+            margin-bottom: 4px;
+        }
+
+        .CommentBox .comment_list .comment_nick_box .comment_nick_info {
+            display: inline-block;
+            position: relative;
+            font-size: 14px;
+            vertical-align: top;
+        }
+
+        .CommentBox .comment_list .comment_nick_box .comment_nickname {
+            font-weight: 600;
+            line-height: 19px;
+        }
+
+        .CommentBox .comment_list .comment_nick_box .comment_badge_writer {
+            display: inline-block;
+            margin-top: -1px;
+            margin-left: 4px;
+            vertical-align: top;
+        }
+        address, em {
+            font-style: normal;
+        }
+
+        .CommentBox .comment_list .comment_text_box {
+            position: relative;
+            font-size: 16px;
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+
+        .CommentBox .comment_list .comment_text_box .comment_text_view {
+            overflow: hidden;
+        }
+
+        .CommentBox .comment_list .comment_text_box .text_blind, .CommentBox .comment_list .comment_text_box .text_comment {
+            font-size: 15px;
+            line-height: 22px;
+            word-break: break-all;
+            word-wrap: break-word;
+            vertical-align: top;
+        }
+
+        .CommentBox .comment_list .comment_footer {
+            display: flex;
+            margin-top: 4px;
+        }
+
+        .CommentBox .comment_list .comment_footer .comment_info_box {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            line-height: 18px;
+            color: #979797;
+        }
+
+        .CommentBox .comment_list .comment_footer .comment_info_box .comment_info_date {
+            margin-right: 12px;
+        }
+        .CommentBox .comment_list .comment_footer .comment_info_box {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            line-height: 18px;
+            color: #979797;
+        }
+
+        .CommentBox .comment_list .comment_footer .u_likeit_list_module {
+            margin-left: 12px;
+        }
+
+        .CommentBox .comment_list .comment_footer .u_likeit_list_module .u_likeit_list_btn {
+            display: flex;
+            align-items: center;
+            height: 18px;
+            font-family: "Apple SD Gothic Neo", "맑은 고딕", "Malgun Gothic", 돋움, dotum, sans-serif;
+            overflow: visible;
+        }
+
+        .CommentBox .comment_list .comment_footer .u_likeit_list_module .u_likeit_list_btn .u_ico {
+            width: 16px;
+            height: 16px;
+            background: url(https://ca-fe.pstatic.net/web-section/static/img/icon_heart16X16.svg?769c2a6…=) no-repeat;
+            background-size: 16px;
+        }
+        .u_likeit_list_module .u_likeit_list_btn .u_ico, .article-movie-sub .u_likeit_list_module .u_likeit_list_btn .u_ico {
+            background-image: url(https://ssl.pstatic.net/static/common/likeit/cafe/sp_likeit.png);
+        }
+        .u_likeit_list_module .u_likeit_list_btn .u_ico {
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: top;
+        }
+
+        .CommentBox .comment_list .CommentItem.CommentItem--reply {
+            padding-left: 44px;
+        }
+
+        .CommentWriter {
+            margin: 12px 0 29px;
+            padding: 16px 10px 10px 18px;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+            box-sizing: border-box;
+            background: #ffffff;
+        }
+
+        .CommentWriter .comment_inbox {
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .CommentWriter .comment_inbox_name {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        textarea.comment_inbox_text[data-v-9273ff28] {
+            max-height: 500px;
+        }
+        .CommentWriter .comment_inbox_text {
+            display: block;
+            width: 100%;
+            min-height: 17px;
+            padding-right: 1px;
+            border: 0;
+            font-size: 13px;
+            -webkit-appearance: none;
+            resize: none;
+            box-sizing: border-box;
+            background: transparent;
+            color: #000000;
+            outline: 0;
+        }
+
+        .CommentWriter .comment_attach {
+            position: relative;
+        }
+
+        .CommentWriter .attach_box {
+            float: left;
+            padding-top: 10px;
+        }
+
+        .CommentWriter .attach_box .button_file {
+            overflow: hidden;
+            display: inline-block;
+            margin-top: 1px;
+            margin-right: 16px;
+            cursor: pointer;
+            vertical-align: top;
+        }
+
+        .CommentWriter .attach_box .button_sticker {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .CommentWriter .register_box {
+            float: right;
+        }
+
+        .CommentWriter .register_box .button {
+            display: inline-block;
+            min-width: 46px;
+            height: 34px;
+            line-height: 36px;
+            font-size: 13px;
+            color: #b7b7b7;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-weight: 700;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .CommentWriter .comment_attach:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .ArticleBottomBtns {
+            padding-top: 14px;
+        }
+
+        .ArticleBottomBtns .left_area {
+            float: left;
+        }
+
+        .BaseButton.size_default:first-child {
+            margin-left: 0;
+        }
+
+        .BaseButton--skinGreen {
+            background: rgba(3, 199, 90, 0.12);
+            color: #009f47;
+        }
+
+        .ArticleBottomBtns .right_area {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<div id="cafe-body-skin">
+    <div id="cafe-body">
+        <div id="naver-gnb">
+            <a href="#" class="link_naver">
+                <img src="https://ssl.pstatic.net/static/cafe/icon_naver_190423.png" width="52" height="10" alt="NAVER"/>
+            </a>
+            <div id="gnb-menu">
+                <p class="naver-h" id="naver-h">
+                    <a href="#">카페홈</a>
+                    <img src="https://cafe.pstatic.net/cafe4/ico-blank.gif" width="1" height="10" alt="|" class="tcol-c"/>
+                </p>
+                <div id="button_town_cafe" class="town-cafe">
+                    <a href="#">이웃</a>
+                    <img src="https://cafe.pstatic.net/cafe4/ico-blank.gif" width="1" height="10" alt="|" class="tcol-c"/>
+                </div>
+                <div id="button_join_cafe" class="join-cafe">
+                    <a href="#">가입카페</a>
+                    <img src="https://cafe.pstatic.net/cafe4/ico-blank.gif" width="1" height="10" alt="|" class="tcol-c"/>
+                </div>
+                <div id="button_mynews_alarm" class="chatting-cafe">
+                    <a href="#">새글</a>
+                    <img src="https://cafe.pstatic.net/cafe4/ico-blank.gif" width="1" height="10" alt="|" class="tcol-c"/>
+                </div>
+                <div id="button_mynews_activity" class="chatting-cafe mynews-cafe off">
+                    <a href="#">내소식</a>
+                    <img src="https://cafe.pstatic.net/cafe4/ico-blank.gif" width="1" height="10" alt="|" class="tcol-c"/>
+                </div>
+                <div id="layer_mynews_activity" class="cc_layer_mynews" style="display: none;">
+                    <a href="#">채팅</a>
+                    <img src="https://cafe.pstatic.net/cafe4/ico-blank.gif" width="1" height="10" alt="|" class="tcol-c"/>
+                </div>
+                <div class="cc_layer_alert" style="display: none;">
+
+                </div>
+                <div class="chatting-cafe">
+                    <a href="#">채팅</a>
+                    <img src="https://cafe.pstatic.net/cafe4/ico-blank.gif" width="1" height="10" alt="|" class="tcol-c"/>
+                </div>
+                <div id="gnb">
+                    <strong class="blind">사용자 링크</strong>
+                    <ul class="gnb_lst" id="gnb_lst" style="display: block;">
+                        <li class="gnb_login_li" id="gnb_login_layer" style="display: none;"></li>
+                        <li class="gnb_my_li" id="gnb_my_layer" style="display: inline-block;">
+                            <div class="gnb_my_namebox" id="gnb_my_namebox" style="background-image: url('https://ssl.pstatic.net/static/common/gnb/2014/ico_arrow_bl1.gif')">
+                                <a href="" id="gnb_my" class="gnb_my">YongQ</a>
+                            </div>
+                        </li>
+                        <li class="gnb_talk_li" id="gnb_talk_layer" style="display: inline-block;">
+                            <a id="gnb_talks_button" class="gnb_talk" href="#">
+                                <span class="blind">네이버톡</span>
+                                <span class="gnb_icon"></span>
+                                <em class="gnb_ico_num" id="gnb_talk_menu" style="display: none;">
+                                        <span class="gnb_ico_new">
+                                            <span class="gnb_count" id="gnb_talk_count" style="display: inline-block;"></span>
+                                        </span>
+                                </em>
+                                <span class="ico_arrow"></span>
+                            </a>
+                        </li>
+                        <li class="gnb_notice_li" id="gnb_notice_layer" style="display: none;"></li>
+                        <li class="mail_li" id="gnb_mail_layer" style="display: none;"></li>
+                        <li class="gnb_service_li" id="gnb_service_layer" style="display: inline-block;">
+                            <a href="" class="gnb_service">
+                                <span class="blind">서비스 더보기</span>
+                                <span class="gnb_icon"></span>
+                                <span class="ico_arrow"></span>
+                            </a>
+                            <div class="gnb_service_lyr" id="gnb_service_lyr">
+                                <div class="gnb_favorite_search" id="gnb_favorite_search"></div>
+                                <div class="gnb_svc_more" id="gnb_svc_more"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div id="cafeappInstallntroLayter" style="display: none; position: absolute; border: 1px solid #969696; background: #fff; top: 25px; left: 676px;">
+
+            </div>
+        </div>
+        <div id="front-img">
+            <div id="front-cafe" style="cursor: hand; cursor: pointer; background-image: none; width: 1080px; max-height: 340px;">
+                <a href="#">
+                    <img src="" alt="banner" class="png24" width="1080"/>
+                </a>
+            </div>
+        </div>
+        <div id="special-menu">
+            <div class="box-special-menu">
+                <ul class="special-menu" id="special-menu-item">
+                    <li id="special-menu-1257" class="default">
+                        <a href="#" class="link_special" id="special-menuLink-1257">이벤트</a>
+                    </li>
+                    <li id="special-menu-1258" class="default">
+                        <a href="#" class="link_special" id="special-menuLink-1258">공지사항</a>
+                    </li>
+                    <li id="special-menu-1259" class="default">
+                        <a href="#" class="link_special" id="special-menuLink-1259">이용정책</a>
+                    </li>
+                    <li id="special-menu-1260" class="default">
+                        <a href="#" class="link_special" id="special-menuLink-1260">회원신청</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="info-search" class="blank-space"></div>
+        <div id="content-area">
+            <div id="group-area" class="skin-1080 fi">
+                <div id="cafe-info-data">
+                    <ul class="info-action-tab">
+                        <li class="tit-info-on">
+                            <button class="gm-tcol-t" type="button" disabled>카페정보</button>
+                        </li>
+                        <li class="tit-action">
+                            <button type="button">나의활동</button>
+                        </li>
+                    </ul>
+                    <div class="box-g">
+                        <h4 class="d-none">카페정보</h4>
+                        <div class="ia-info-data" id="ia-info-data">
+                            <ul>
+                                <li class="gm-tcol-c">
+                                    <a href="#">
+                                        <img src="IMG_6288.JPG" width="58" height="58" alt="카"/>
+                                        <span class="border mask_white"></span>
+                                    </a>
+                                </li>
+                                <li class="gm-tcol-c">
+                                    <a href="#" class="id mlink gm-tcol-c">
+                                        <div class="ellipsis gm-tcol-c">
+                                            <div class="ellipsis">중고나라운영진1</div>
+                                        </div>
+                                    </a>
+                                    <em class="ico-manager">매니저</em>
+                                    <div class="thm">
+                                        <a href="#" class="gm-tcol-c">2003.12.10 개설</a>
+                                    </div>
+                                    <div class="info-view">
+                                        <a href="#" class="u gm-tcol-c">카페소개</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ia-info-data2">
+                            <ul>
+                                <li class="level-info border-sub">
+                                    <a href="#" class="gm-tcol-c">
+                                        <strong class="d-none">카페등급</strong>
+                                        <span class="ico_rank rank30"></span>
+                                        <em>숲</em>
+                                    </a>
+                                </li>
+                                <li class="mem-cnt-info" style="cursor:pointer;">
+                                    <strong class="d-none">카페멤버수</strong>
+                                    <a href="#">
+                                        <img src="https://ssl.pstatic.net/static/cafe/cafe_pc/svg/ico_member.svg" alt="멤버수"/>
+                                        <em>
+                                            19,472,595
+                                            <span class="ico_lock2">비공개</span>
+                                        </em>
+                                    </a>
+                                    <div class="layer_hint" style="display: none;" id="hiddenCafeApplyLayer"></div>
+                                    <div class="layer_hint" style="display: none;" id="hiddenOpenMemberInfoLayer"></div>
+                                    <a href="#" class="link_invite">초대</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="ia-info-data-emblem">
+                        <strong class="txt gm-tcol-c">대표 인기카페</strong>
+                    </div>
+                    <div class="cafe-write-btn">
+                        <a href="#" class="_rosRestrict">카페 글쓰기</a>
+                    </div>
+                    <div class="ia-info-btn">
+                        <a href="#" class="link_chat _tableRestrict(채팅)">카페 채팅</a>
+                    </div>
+                </div>
+                <div id="cafe-menu">
+                    <div class="box-g-t"></div>
+                    <div class="box-g-m">
+                        <div class="cafe-menu-tit frst"></div>
+                        <ul id="favoriteMenuGroup" style="display: none;" class="cafe-menu-list"></ul>
+                        <div class="cafe-menu-space" id="gend41"></div>
+                        <ul class="cafe_menu-list">
+                            <li>
+                                <img src="" alt="" width="10" height="11" class="ico-list"/>
+                                <a href="#" class="gm-tcol-c" id="menuLink0">전체글보기</a>
+                            </li>
+                            <li>
+                                <img src="" width="10" height="11" class="ico-hot" alt=""/>
+                                <a href="#" class="gm-tcol-c" id="menuLink-7">인기글</a>
+                                <img src="" width="12" height="12" class="ico_new" alt=""/>
+                            </li>
+                        </ul>
+                        <div class="cafe-menu-space" id="gend42"></div>
+                        <ul class="cafe-menu-list">
+                            <li>
+                                <img src="" alt="" width="10" height="11" class="ico-list"/>
+                                <a href="#" class="gm-tcol-c" id="menuLink1">얼평해드립니다</a>
+                            </li>
+                            <li>
+                                <img src="" alt="" width="10" height="11" class="ico-list"/>
+                                <a href="#" class="gm-tcol-c" id="menuLink2">[프로필 자랑해요]</a>
+                            </li>
+                            <li>
+                                <img src="" alt="" width="10" height="11" class="ico-list"/>
+                                <a href="#" class="gm-tcol-c" id="menuLink3">전체글보기</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="box-g-b"></div>
+                </div>
+                <ul class="com">
+                    <li class="box-w">
+                        <p id="cafe-secede">
+                            <a href="#" id="a_secede" class="tcol-c _rosRestrict">카페탈퇴하기</a>
+                        </p>
+                    </li>
+                </ul>
+                <div id="member-action-data" style="display: none;"></div>
+            </div>
+            <div id="main-area" class="skin-1080 fr">
+                <div id="cafe_main" title="카페 메인" width="860" height="100%" scrolling="no" marginwidth="0" marginheight="0" allowtransparency="true" allowfullscreen style="height: 6184px;">
+                    <div id="app">
+                        <div class="Article layout_content">
+                            <div class="article_wrap ArticleContainerWrap">
+                                <div class="ArticleTopBtns">
+                                    <div class="left_area"></div>
+                                    <div class="right_area">
+                                        <a href="#" class="BaseButton btn_prev BaseButton--skinGray size_default">
+                                            <span class="BaseButton__txt"> 이전글 </span>
+                                        </a>
+                                        <a href="#" class="BaseButton btn_prev BaseButton--skinGray size_default">
+                                            <span class="BaseButton__txt"> 다음글 </span>
+                                        </a>
+                                        <a href="#" class="BaseButton btn_prev BaseButton--skinGray size_default">
+                                            <span class="BaseButton__txt"> 목록 </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="ArticleContentBox">
+                                    <div class="article_header">
+                                        <div>
+                                            <div class="ArticleTitle">
+                                                <a href="#" class="link_board">얼평해드립니다</a>
+                                                <div class="title_area">
+                                                    <h3 class="title_text">얼평해드립니다</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="WriterInfo">
+                                            <div class="thumb_area">
+                                                <a href="#" class="thumb">
+                                                    <img src="IMG_6272.JPG" alt="" width="36" height="36"/>
+                                                </a>
+                                            </div>
+                                            <div class="profile_area">
+                                                <div class="profile_info">
+                                                    <div class="nick_box">
+                                                        <button class="nickname">얼평의 신</button>
+                                                    </div>
+                                                    <em class="nick_level"></em>
+                                                    <a href="#" class="link_talk">1:1채팅</a>
+                                                </div>
+                                                <div class="article_info">
+                                                    <span class="date">2025.03.22. 01:55</span>
+                                                    <span class="count">조회 5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ArticleTool">
+                                            <a href="#" class="button_comment">
+                                                댓글
+                                                <strong class="num">0</strong>
+                                            </a>
+                                            <a href="#" class="button_url">URL 복사</a>
+                                            <div class="toast_url_copy_successful" style="display: none;"></div>
+                                            <div class="more_area"></div>
+                                        </div>
+                                    </div>
+                                    <div class="article_container">
+                                        <div class="article_viewer">
+                                            <div>
+                                                <div class="content CafeViewer">
+                                                    <div class="se-viewer se-theme-default" lang="ko">
+                                                        <div class="se-main-container">
+                                                            <div class="se-component se-text se-l-default">
+                                                                <div class="se-component-content">
+                                                                    <div class="se-section se-section-text se-l-default">
+                                                                        <div class="se-module se-module-text">
+                                                                            <p class="se-text-paragraph se-text-paragraph-align-">
+                                                                                <span class="se-fs- se-ff-">jaslfdjlafsjdlksajlfjdaslkfjlkjl</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="AttachFileIssueLayer" style="display: none;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="article_writer">
+                                            <div>
+                                                <div class="ArticleWriterProfile">
+                                                    <a href="#" class="more_area">
+                                                            <span class="thumb">
+                                                                <img src="IMG_5709.JPG" alt="" width="36" height="36"/>
+                                                            </span>
+                                                        <span class="box">
+                                                                <strong class="user">얼평의 신</strong>
+                                                                님의 게시글 더보기 >
+                                                            </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ReplyBox">
+                                            <div class="box_left">
+                                                <div class="like_article">
+                                                    <div class="ReactionLikeIt u_likeit_list_module _cafeReactionModule">
+                                                        <a href="#" class="like_no u_likeit_list_btn _button off">
+                                                            <span class="u_ico _icon"></span>
+                                                            <em class="u_txt _label">좋아요</em>
+                                                            <em class="u_cnt _count">0</em>
+                                                        </a>
+                                                    </div>
+                                                    <a href="#" class="button_like_list">
+                                                        <span class="blind">이 글을 '좋아요'한 멤버 리스트</span>
+                                                    </a>
+                                                </div>
+                                                <a href="#" class="button_comment">
+                                                    <span class="icon_area"></span>
+                                                    댓글
+                                                    <strong class="num">0</strong>
+                                                </a>
+                                            </div>
+                                            <div class="box_right">
+                                                <div class="social_article">
+                                                    <a href="#" class="naver-splugin">
+                                                            <span class="naver-splugin-c social_text">
+                                                                공유
+                                                            </span>
+                                                    </a>
+                                                </div>
+                                                <div class="report_article">
+                                                    <a href="#" class="button_report">신고</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="CommentCleanBot cleanbot"></div>
+                                        <div class="CommentBox">
+                                            <div>
+                                                <div class="comment_option">
+                                                    <h3 class="blind">댓글</h3>
+                                                    <div class="comment_tab">
+                                                        <ul class="comment_tab_list">
+                                                            <li class="comment_tab_item">
+                                                                <a href="#" class="comment_tab_button" aria-selected="true">등록순</a>
+                                                            </li>
+                                                            <li class="comment_tab_item">
+                                                                <a href="#" class="comment_tab_button">최신순</a>
+                                                            </li>
+                                                        </ul>
+                                                        <button type="button" class="comment_refresh_button">
+                                                            <span class="blind">새로고침</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="comment_alarm">
+                                                        <div class="SubscribeButton">
+                                                            <input id="2" type="checkbox" class="switch_input blind">
+                                                            <label for="2" class="switch_slider">
+                                                                <span class="blind">등록</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="ToggleSwitchTooltip"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <ul class="comment_list">
+                                                    <li class="CommentItem">
+                                                        <div class="comment_area">
+                                                            <a href="#" class="comment_thumb">
+                                                                <img src="IMG_6288.JPG" alt="" width="36" height="36"/>
+                                                            </a>
+                                                            <div class="comment_box">
+                                                                <div class="comment_nick_box">
+                                                                    <div class="comment_nick_info">
+                                                                        <a href="#" class="comment_nickname">GOLD 럭키</a>
+                                                                    </div>
+                                                                    <em class="comment_badge_writer">
+                                                                        <span>작성자</span>
+                                                                    </em>
+                                                                </div>
+                                                                <div class="comment_text_box">
+                                                                    <p class="comment_text_view">
+                                                                        <span class="text_comment">얼평의 신님! 저도 평가 부탁드려도 될까요? 오디션까지 얼마 안 남았거든요. 제발 부탁드려요 ㅠ_ㅠ</span>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="comment_footer">
+                                                                    <div class="comment_info_box">
+                                                                        <span class="comment_info_date">2025.03.14. 22:04</span>
+                                                                        <a href="#" class="comment_info_button">답글쓰기</a>
+                                                                    </div>
+                                                                    <div class="u_likeit_list_module _cafeReactionModule">
+                                                                        <a href="#" class="like_no u_likeit_list_btn">
+                                                                            <span class="u_ico _icon"></span>
+                                                                        </a>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="comment_tool">
+                                                                    <button class="comment_tool_button"></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="CommentItem CommentItem--reply">
+                                                        <div class="comment_area">
+                                                            <a href="#" class="comment_thumb">
+                                                                <img src="IMG_5709.JPG" alt="" width="36" height="36"/>
+                                                            </a>
+                                                            <div class="comment_box">
+                                                                <div class="comment_nick_box">
+                                                                    <div class="comment_nick_info">
+                                                                        <a href="#" class="comment_nickname">얼평의 신</a>
+                                                                    </div>
+                                                                    <em class="comment_badge_writer">
+                                                                        <span>작성자</span>
+                                                                    </em>
+                                                                </div>
+                                                                <div class="comment_text_box">
+                                                                    <p class="comment_text_view">
+                                                                        <span class="text_comment">사진 한번 올려주세요.</span>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="comment_footer">
+                                                                    <div class="comment_info_box">
+                                                                        <span class="comment_info_date">2025.03.14. 22:36</span>
+                                                                        <a href="#" class="comment_info_button">답글쓰기</a>
+                                                                    </div>
+                                                                    <div class="u_likeit_list_module _cafeReactionModule">
+                                                                        <a href="#" class="like_no u_likeit_list_btn">
+                                                                            <span class="u_ico _icon"></span>
+                                                                        </a>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="comment_tool">
+                                                                    <button class="comment_tool_button"></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="CommentItem CommentItem--reply">
+                                                        <div class="comment_area">
+                                                            <a href="#" class="comment_thumb">
+                                                                <img src="IMG_5709.JPG" alt="" width="36" height="36"/>
+                                                            </a>
+                                                            <div class="comment_box">
+                                                                <div class="comment_nick_box">
+                                                                    <div class="comment_nick_info">
+                                                                        <a href="#" class="comment_nickname">GOLD 럭키</a>
+                                                                    </div>
+                                                                    <em class="comment_badge_writer">
+                                                                        <span>작성자</span>
+                                                                    </em>
+                                                                </div>
+                                                                <div class="comment_text_box">
+                                                                    <p class="comment_text_view">
+                                                                        <span class="text_comment"></span>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="CommentItemImage">
+                                                                    <a href="#" class="comment_image_link">
+                                                                        <img alt="첨부사진" class="image" src="IMG_5709.JPG"/>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="comment_footer">
+                                                                    <div class="comment_info_box">
+                                                                        <span class="comment_info_date">2025.03.14. 22:40</span>
+                                                                        <a href="#" class="comment_info_button">답글쓰기</a>
+                                                                    </div>
+                                                                    <div class="u_likeit_list_module _cafeReactionModule">
+                                                                        <a href="#" class="like_no u_likeit_list_btn">
+                                                                            <span class="u_ico _icon"></span>
+                                                                        </a>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="comment_tool">
+                                                                    <button class="comment_tool_button"></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="CommentWriter">
+                                                <div class="comment_inbox">
+                                                    <strong class="blind">댓글을 입력하세요</strong>
+                                                    <em class="comment_inbox_name">이르음</em>
+                                                    <textarea placeholder="댓글을 남겨보세요" rows="1" class="comment_inbox_text" style="overflow: hidden; overflow-wrap: break-word; height: 17px;"></textarea>
+                                                </div>
+                                                <div class="comment_attach">
+                                                    <div class="attach_box">
+                                                        <label for="attach3" class="button_file">
+                                                            <input id="attach3" type="file" title="사진첨부" class="blind">
+                                                        </label>
+                                                        <a role="button" class="button_sticker"></a>
+                                                    </div>
+                                                    <div class="register_box">
+                                                        <a role="button" class="button btn_register">등록</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ArticleBottomBtns">
+                                    <div class="left_area">
+                                        <a href="#" class="BaseButton BaseButton--skinGreen size_default">
+                                            <span class="BaseButton_txt">글쓰기</span>
+                                        </a>
+                                        <a href="#" class="BaseButton BaseButton--skinGray size_default">
+                                            <span class="BaseButton_txt">답글</span>
+                                        </a>
+                                    </div>
+                                    <div class="right_area">
+                                        <a href="#" class="BaseButton BaseButton--skinGray size_default">
+                                            <span class="BaseButton__txt">목록</span>
+                                        </a>
+                                        <a href="#" class="BaseButton BaseButton--skinGray size_default">
+                                            <span class="BaseButton__txt">TOP</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer"></footer>
+    </div>
+</div>
+</body>
+</html>
